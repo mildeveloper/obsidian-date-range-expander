@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-date-range-expander",
-	"version": "0.9.1",
+	"version": "1.0.0",
 	"description": "Quickly add a range of day references given a date duration.",
 	"main": "main.js",
 	"scripts": {
