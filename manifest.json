@@ -1,0 +1,14 @@
+{
+	"id": "date-range-expander",
+	"name": "Date Range Expander",
+	"version": "0.9.0",
+	"minAppVersion": "1.5.8",
+	"description": "Quickly add a range of day references given a date duration.",
+	"author": "Mil",
+	"authorUrl": "https://github.com/mildeveloper",
+	"fundingUrl": {
+		"Ko-fi": "https://ko-fi.com/mildeveloper",
+		"Buy Me a Coffee": "https://buymeacoffee.com/mildeveloper"
+	},
+	"isDesktopOnly": false
+}
