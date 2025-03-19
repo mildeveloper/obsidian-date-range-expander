@@ -33,8 +33,25 @@ The plugin will then insert your date range using your configured format setting
 
 - **Friendly date format**: Format for displaying dates in a more readable way in certains locations like the callout and alert boxes.
   - Default: DDD D MMM YYYY
-  - Supports: D, DD, DDD, DDDD, M, MM, MMM, MMMM, Y, YY, YYY, YYYY
-  - Example: Fri 15 Mar 2024
+  - Supports:
+    - D: Single digit day (1-31)
+    - DD: Two digit day with leading zero (01-31)
+    - DDD: Three letter day abbreviation (Mon, Tue, etc.)
+    - DDDD: Full day name (Monday, Tuesday, etc.)
+    - M: Single digit month (1-12)
+    - MM: Two digit month with leading zero (01-12)
+    - MMM: Three letter month abbreviation (Jan, Feb, etc.)
+    - MMMM: Full month name (January, February, etc.)
+    - Y: Single digit year (0-9)
+    - YY: Two digit year (00-99)
+    - YYY: Three digit year (000-999)
+    - YYYY: Full four digit year (0000-9999)
+  - Examples:
+    - DDD D MMM YYYY -> Fri 8 Mar 2024
+    - MMMM D, YYYY -> March 8, 2024
+    - DD/MM/YY -> 08/03/24
+    - DDDD, MMMM D, YYYY -> Friday, March 8, 2024
+    - YYYY-MM-DD -> 2024-03-08
 
 - **Date separator**: Character(s) used to separate dates in the sequence
   - Default: ", "
