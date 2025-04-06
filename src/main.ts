@@ -11,8 +11,6 @@ export default class DateRangeExpanderPlugin extends Plugin {
 	dateUtils: DateUtils;
 
 	async onload() {
-		console.log('DateRangeExpander loaded');
-		
 		await this.loadSettings();
 
 		this.dateUtils = new DateUtils();
@@ -56,10 +54,6 @@ export default class DateRangeExpanderPlugin extends Plugin {
 	async loadSettings() { this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData()); }
 
 	async saveSettings() { await this.saveData(this.settings); }
-
-	onunload() {
-        console.log('DateRangeExpander unloaded');
-    }
 
 	getActiveEditor() {
 		const activeLeaf = this.app.workspace.getActiveViewOfType(MarkdownView);
