@@ -1,6 +1,7 @@
 import { App, PluginSettingTab, Setting } from 'obsidian';
 import DateRangeExpanderPlugin from './main';
 import { DEFAULT_SETTINGS } from './types';
+import { normalizePath } from 'obsidian';
 
 export class DateRangeExpanderSettingTab extends PluginSettingTab {
     plugin: DateRangeExpanderPlugin;
@@ -98,7 +99,7 @@ export class DateRangeExpanderSettingTab extends PluginSettingTab {
                 text.setPlaceholder('Enter folder path')
                     .setValue(this.plugin.settings.customFolderPath || '')
                     .onChange(async (value) => {
-                        this.plugin.settings.customFolderPath = value;
+                        this.plugin.settings.customFolderPath = normalizePath(value);
                         await this.plugin.saveSettings();
                     });
             });

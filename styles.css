@@ -1,8 +1,22 @@
-/*
+.date-option-container {
+    margin-bottom: 15px;
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.date-input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
-If your plugin does not need CSS, delete this file.
+.date-input-row input[type="radio"] {
+    margin-right: 8px;
+}
 
-*/
+.date-input-row input[type="text"],
+.date-input-row input[type="number"] {
+    margin-left: 5px;
+}
+
+.date-input-row select {
+    margin-left: 5px;
+}

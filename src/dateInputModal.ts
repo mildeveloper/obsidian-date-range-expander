@@ -29,7 +29,6 @@ export class DateInputModal extends Modal {
         const { contentEl } = this;
         contentEl.empty();
 
-        this.addStyles();
         this.setupKeyboardListener();
         this.createStartDateInput();
         this.createRangeOptions();
@@ -91,32 +90,6 @@ export class DateInputModal extends Modal {
 
         const dateCount = this.dateUtils.calculateDaysInRange(startDate, endDate);
         return dateCount;
-    }
-
-    private addStyles() {
-        const styleEl = document.createElement('style');
-        styleEl.textContent = `
-			.date-option-container {
-				margin-bottom: 15px;
-			}
-			.date-input-row {
-				display: flex;
-				align-items: center;
-				margin-bottom: 10px;
-			}
-			.date-input-row input[type="radio"] {
-				margin-right: 8px;
-			}
-			.date-input-row input[type="text"],
-			.date-input-row input[type="number"] {
-				margin-left: 5px;
-			}
-			.date-input-row select {
-				margin-left: 5px;
-			}
-		`;
-
-        this.contentEl.appendChild(styleEl);
     }
 
     private setupKeyboardListener() {
@@ -284,7 +257,7 @@ export class DateInputModal extends Modal {
 
             if (validInput) {
                 const dateCount = this.calculateDateCount();
-                this.submitButton.textContent = `Insert ${dateCount} Date${dateCount !== 1 ? 's' : ''}`;
+                this.submitButton.textContent = `Insert ${dateCount} date${dateCount !== 1 ? 's' : ''}`;
             } else {
                 this.submitButton.textContent = 'Insert';
             }
